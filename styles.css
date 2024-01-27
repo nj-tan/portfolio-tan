@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling before entering the main content */
+}
+
+#overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1B1B1B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10; /* Ensures it stays above the main content */
+}
+
+#overlay h1 {
+    color: #ECECEC;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+#overlayButton {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none; /* Remove default border */
+    outline: none; /* Remove outline on focus */
+    border-radius: 30px; /* Rounded corners */
+    background: linear-gradient(145deg, #252525, #232229); /* Subtle gradient for a royal look */
+    color: #ffffff; /* White text color */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for interactions */
+}
+
+#overlayButton:hover {
+    background: linear-gradient(145deg, #1b1b1b, #2e2e2e); /* Gradient inversion on hover */
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4); /* Slightly larger shadow on hover */
+}
+
+#overlayButton:active {
+    background: #33313b; /* Solid color on active to give a feeling of depth */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Smaller shadow to simulate pressing */
+}
+
+
+/* Main content styling */
+#mainContent {
+    display: none; /* Hidden initially */
+    animation: fadeIn 1s ease-out forwards;
+    /* More styles for your content */
+}
+
+/* Fade in animation for main content */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#circleNav {
+    position: fixed;
+    top: 40px; /* Position from the top */
+    right: 60px; /* Position from the right */
+    width: 60px;
+    height: 60px;
+    background-color: #333; /* Dark grey */
+    border-radius: 50%;
+    visibility: hidden; /* Initially hidden */
+    transition: visibility 0.5s, opacity 0.5s linear;
+    z-index: 100;
+}
+
+
+#menuToggle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.menuLines {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+#menuToggle.active .menuLines:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+#menuToggle.active .menuLines:nth-child(2) {
+    opacity: 0;
+}
+
+#menuToggle.active .menuLines:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+
+#menuOptions {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    visibility: hidden; /* Initially hidden */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 200; /* Ensure it's above other elements */
+}
+
+
+#menuOptions li a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+#menuOptions li a:hover {
+    background-color: #575757; /* Lighter grey */
+}
+
+.scroll-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    /* border: 1px solid pink; */
+}
+
+.photo-scroll {
+    display: inline-block;
+    animation: scroll 30s linear infinite;
+}
+
+.photo-scroll img {
+    width: 120px;
+    height: 120px;
+    padding: 2rem;
+    display: inline-block;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* As the images are repeated, -50% will make it seamless */
+    }
+}
