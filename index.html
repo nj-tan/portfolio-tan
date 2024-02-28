@@ -2,311 +2,392 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap"
-      rel="stylesheet"
-    />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&display=swap" rel="stylesheet">
-
     <title>NJT.dev</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
-    <!-- overlay -->
-
-    <div id="overlay">
-      <h1>Hello</h1>
-      <button id="overlayButton">.</button>
-    </div>
-
-    <!-- navbar -->
-
-    <nav id="circleNav">
-      <div id="menuToggle">
-        <div class="menuLines"></div>
-        <div class="menuLines"></div>
-        <div class="menuLines"></div>
+    <nav id="desktop-nav">
+      <div class="logo">NJT.dev</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </div>
-      <ul id="menuOptions">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
     </nav>
-
-    <!-- landing page -->
-<div id="home">
-    <div class="container-fluid vh-100">
-      <div class="row h-100">
-        <div
-          class="col-lg-6 d-flex align-items-center justify-content-center p-5"
-        >
-          <img src="your-image.jpg" class="rounded-image" alt="NJT Pic here" />
+    <nav id="hamburger-nav">
+      <div class="logo">NJT.dev</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-        <div
-          class="col-lg-6 d-flex flex-column align-items-start justify-content-center p-5"
-        >
-          <h1>FullStack Developer</h1>
-          <p class="text-justify">
-            Hey there! I'm NJT, a multifaceted enthusiast with a penchant for
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/FACE CARD.png" alt="NJT profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Neiljohn Tan</h1>
+        <p class="section__text__p2">Fullstack Developer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/resume-example.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/nj-tan/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/nj-tan'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/about-pic.jpg"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>1 year <br />Fullstack Development</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>Bachelors Degree in Medical Technology<br />ZUITT Coding Bootcamp</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              Hey there! I'm NJT, a multifaceted enthusiast with a penchant for
             both flexing code and hitting the gym. When I'm not coding, you'll
-            find me racing! Either on the pavement or in the virtual world
+            find me racing. Either on the pavement or in the virtual world
             getting my game on. With a passion for both the digital and the
-            physical, I believe in striking the perfect balance between code and
-            cardio!
-          </p>
-          <div class="icons">
-            <!-- Placeholder for icons -->
-            <i class="placeholder-icon">githab</i>
-            <i class="placeholder-icon">linkden</i>
+            physical world, I believe in striking the perfect balance between code and cardio!
+            </p>
           </div>
         </div>
       </div>
-    </div>
-</div>
-    <!-- home -->
-
-    <!-- projects -->
-
-    <div id="projects" class="py-5">
-
-    <h2
-
-        class="container d-flex align-items-center justify-content-center"
-      >
-        Projects
-      </h2>
-
-    <div id="projects" class="container py-3">
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-            <!-- Project 1 -->
-            <div class="col">
-                <div class="card h-100 text-center">
-                    <div class="card-body">
-                        <h5 class="card-title">Project Title 1</h5>
-                        <img src="placeholder-image.jpg" class="card-img-top" alt="Project Image"> <!-- Placeholder image -->
-                    </div>
-                    <div class="card-footer bg-transparent border-0 d-flex justify-content-center align-items-center">
-                        <i class="demo-icon me-2">🚀</i> <!-- Smaller icon to the left of the button -->
-                        <a href="#" class="btn btn-primary">Demo Me</a>
-                    </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='#experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Experienced</p>
                 </div>
-            </div>
-            <!-- Project 2 -->
-            <div class="col">
-                <div class="card h-100 text-center">
-                    <div class="card-body">
-                        <h5 class="card-title">Project Title 1</h5>
-                        <img src="placeholder-image.jpg" class="card-img-top" alt="Project Image"> <!-- Placeholder image -->
-                    </div>
-                    <div class="card-footer bg-transparent border-0 d-flex justify-content-center align-items-center">
-                        <i class="demo-icon me-2">🚀</i> <!-- Smaller icon to the left of the button -->
-                        <a href="#" class="btn btn-primary">Demo Me</a>
-                    </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Experienced</p>
                 </div>
-            </div>
-            <!-- Project 3 -->
-            <div class="col">
-                <div class="card h-100 text-center">
-                    <div class="card-body">
-                        <h5 class="card-title">Project Title 1</h5>
-                        <img src="placeholder-image.jpg" class="card-img-top" alt="Project Image"> <!-- Placeholder image -->
-                    </div>
-                    <div class="card-footer bg-transparent border-0 d-flex justify-content-center align-items-center">
-                        <i class="demo-icon me-2">🚀</i> <!-- Smaller icon to the left of the button -->
-                        <a href="#" class="btn btn-primary">Demo Me</a>
-                    </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>REACT</h3>
+                  <p>Intermediate</p>
                 </div>
-            </div>
-            <!-- Project 4 -->
-            <div class="col">
-              <div class="card h-100 text-center">
-                  <div class="card-body">
-                      <h5 class="card-title">Project Title 1</h5>
-                      <img src="placeholder-image.jpg" class="card-img-top" alt="Project Image"> <!-- Placeholder image -->
-                  </div>
-                  <div class="card-footer bg-transparent border-0 d-flex justify-content-center align-items-center">
-                      <i class="demo-icon me-2">🚀</i> <!-- Smaller icon to the left of the button -->
-                      <a href="#" class="btn btn-primary">Demo Me</a>
-                  </div>
-              </div>
-          </div>
-          <!-- Project 5 -->
-          <div class="col">
-            <div class="card h-100 text-center">
-                <div class="card-body">
-                    <h5 class="card-title">Project Title 1</h5>
-                    <img src="placeholder-image.jpg" class="card-img-top" alt="Project Image"> <!-- Placeholder image -->
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Basic</p>
                 </div>
-                <div class="card-footer bg-transparent border-0 d-flex justify-content-center align-items-center">
-                    <i class="demo-icon me-2">🚀</i> <!-- Smaller icon to the left of the button -->
-                    <a href="#" class="btn btn-primary">Demo Me</a>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>TypeScript</h3>
+                  <p>Basic</p>
                 </div>
-            </div>
-        </div>
-        <!-- Project 6 -->
-        <div class="col">
-          <div class="card h-100 text-center">
-              <div class="card-body">
-                  <h5 class="card-title">Project Title 1</h5>
-                  <img src="placeholder-image.jpg" class="card-img-top" alt="Project Image"> <!-- Placeholder image -->
-              </div>
-              <div class="card-footer bg-transparent border-0 d-flex justify-content-center align-items-center">
-                  <i class="demo-icon me-2">🚀</i> <!-- Smaller icon to the left of the button -->
-                  <a href="#" class="btn btn-primary">Demo Me</a>
-              </div>
-          </div>
-      </div>
-        </div>
-    </div>
-</div>
-
-    <!-- skills -->
-
-    <div class="skillsDiv">
-      <h2
-        id="skills"
-        class="container d-flex align-items-center justify-content-center"
-      >
-        Skills & Toolset
-      </h2>
-
-      <div class="skillsContainer">
-        <div class="row row-equal-height justify-content-center">
-          <div class="col-md-4">
-            <!-- Card Content -->
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title text-center">Frontend</h5>
-                <div class="row d-flex justify-content-center">
-                  <ul class="list-unstyled col-6">
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Bootstrap</li>
-                  </ul>
-                  <ul class="list-unstyled col-6">
-                    <li>Tailwind</li>
-                    <li>React.JS</li>
-                    <li>Vite.JS</li>
-                  </ul>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>VITE</h3>
+                  <p>Intermediate</p>
                 </div>
-              </div>
+              </article>
             </div>
           </div>
 
-          <div class="col-md-4">
-            <!-- Card Content -->
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title text-center">Backend</h5>
-                <div class="row d-flex justify-content-center">
-                  <ul class="list-unstyled col-6">
-                    <li>Node.JS</li>
-                    <li>Express.JS</li>
-                    <li>Python</li>
-                  </ul>
-                  <ul class="list-unstyled col-6">
-                    <li>Java</li>
-                    <li>MongoDB</li>
-                    <li>SQL</li>
-                  </ul>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Backend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>NoSQL</h3>
+                  <p>Basic</p>
                 </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <!-- Card Content -->
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title text-center">Additionals</h5>
-                <div class="row d-flex justify-content-center">
-                  <ul class="list-unstyled col-6">
-                    <li>GitHub</li>
-                    <li>GitLab</li>
-                    <li>Figma</li>
-                  </ul>
-                  <ul class="list-unstyled col-6">
-                    <li>Canva</li>
-                    <li>Vercel</li>
-                    <li>Render</li>
-                  </ul>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Node JS</h3>
+                  <p>Intermediate</p>
                 </div>
-              </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Express JS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="scroll-container">
-        <div class="photo-scroll">
-          <img src="./images/html.png" alt="html" />
-          <img src="./images/css.png" alt="css" />
-          <img src="./images/bootstrap.png" alt="bootstrap" />
-          <img src="./images/javascript.png" alt="js" />
-          <img src="./images/mongodb.png" alt="mongodb" />
-          <img src="./images/express.png" alt="express" />
-          <img src="./images/react.png" alt="react" />
-          <img src="./images/vite.png" alt="vite" />
-          <img src="./images/nodejs.png" alt="node" />
-          <img src="./images/api.png" alt="api" />
-          <img src="./images/java.png" alt="java" />
-          <img src="./images/python.png" alt="python" />
-          <img src="./images/aws.png" alt="aws" />
-          <img src="./images/github.png" alt="github" />
-          <img src="./images/gitlab.png" alt="gitlab" />
-          <img src="./images/canva.png" alt="canva" />
-          <img src="./images/figma.png" alt="figma" />
-          <img src="./images/microsoft.png" alt="microsoft" />
-          <!-- Repeat the set for smooth animation -->
-          <img src="./images/html.png" alt="html" />
-          <img src="./images/css.png" alt="css" />
-          <img src="./images/bootstrap.png" alt="bootstrap" />
-          <img src="./images/javascript.png" alt="js" />
-          <img src="./images/mongodb.png" alt="mongodb" />
-          <img src="./images/express.png" alt="express" />
-          <img src="./images/react.png" alt="react" />
-          <img src="./images/vite.png" alt="vite" />
-          <img src="./images/nodejs.png" alt="node" />
-          <img src="./images/api.png" alt="api" />
-          <img src="./images/java.png" alt="java" />
-          <img src="./images/python.png" alt="python" />
-          <img src="./images/aws.png" alt="aws" />
-          <img src="./images/github.png" alt="github" />
-          <img src="./images/gitlab.png" alt="gitlab" />
-          <img src="./images/canva.png" alt="canva" />
-          <img src="./images/figma.png" alt="figma" />
-          <img src="./images/microsoft.png" alt="microsoft" />
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='#projects'"
+      />
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-1.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">ChatterBOX</h2>
+            <p>A fullstack messaging website</p>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/nj-tan/MERN-ChatterBOX'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://chatterbox-1x4h.onrender.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">News-Web</h2>
+            <p>API application with newsapi.org</p>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/nj-tan/news-web'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://nj-tan.github.io/news-web/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-3.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Responsive Dashboard</h2>
+            <p>Management System responsive dashboard</p>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/nj-tan/dashboard'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://nj-tan.github.io/dashboard/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-
-    <!-- about me -->
-
-
-
-    <!-- contact -->
-
-    <footer class="d-flex justify-content-center">
-        &copy; 2024 - All resources used are free | NJT.dev
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='#contact'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:neiljohn.tan@gmail.com">neiljohn.tan@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/github.png"
+            alt="Github icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://github.com/nj-tan">Github</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/nj-tan/">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2024 Neiljohn Tan. All Rights Reserved.</p>
     </footer>
-
-    <script src="scripts.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
+    <script src="script.js"></script>
   </body>
 </html>
