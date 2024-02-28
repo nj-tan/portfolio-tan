@@ -1,165 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&display=swap" rel="stylesheet">
 
     <title>NJT.dev</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <!-- overlay -->
 
     <div id="overlay">
-        <h1>Hello</h1>
-        <button id="overlayButton">.</button>
+      <h1>Hello</h1>
+      <button id="overlayButton">.</button>
     </div>
 
     <!-- navbar -->
 
     <nav id="circleNav">
-        <div id="menuToggle">
-            <div class="menuLines"></div>
-            <div class="menuLines"></div>
-            <div class="menuLines"></div>
-        </div>
-        <ul id="menuOptions">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+      <div id="menuToggle">
+        <div class="menuLines"></div>
+        <div class="menuLines"></div>
+        <div class="menuLines"></div>
+      </div>
+      <ul id="menuOptions">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
 
     <!-- landing page -->
-
+<div id="home">
     <div class="container-fluid vh-100">
-        <div class="row h-100">
-            <div class="col-lg-6 d-flex align-items-center justify-content-center p-5">
-                <img src="your-image.jpg" class="rounded-image" alt="NJT Pic here">
-            </div>
-            <div class="col-lg-6 d-flex flex-column align-items-start justify-content-center p-5">
-                <h1>FullStack Developer</h1>
-                <p class="text-justify">Hey there! I'm NJT, a multifaceted enthusiast with a penchant for both flexing code and hitting the gym. When I'm not coding, you'll find me racing! Either on the pavement or in the virtual world getting my game on.  With a passion for both the digital and the physical, I believe in striking the perfect balance between code and cardio!</p>
-                <div class="icons">
-                    <!-- Placeholder for icons -->
-                    <i class="placeholder-icon">githab</i>
-                    <i class="placeholder-icon">linkden</i>
-                </div>
-            </div>
+      <div class="row h-100">
+        <div
+          class="col-lg-6 d-flex align-items-center justify-content-center p-5"
+        >
+          <img src="your-image.jpg" class="rounded-image" alt="NJT Pic here" />
         </div>
+        <div
+          class="col-lg-6 d-flex flex-column align-items-start justify-content-center p-5"
+        >
+          <h1>FullStack Developer</h1>
+          <p class="text-justify">
+            Hey there! I'm NJT, a multifaceted enthusiast with a penchant for
+            both flexing code and hitting the gym. When I'm not coding, you'll
+            find me racing! Either on the pavement or in the virtual world
+            getting my game on. With a passion for both the digital and the
+            physical, I believe in striking the perfect balance between code and
+            cardio!
+          </p>
+          <div class="icons">
+            <!-- Placeholder for icons -->
+            <i class="placeholder-icon">githab</i>
+            <i class="placeholder-icon">linkden</i>
+          </div>
+        </div>
+      </div>
     </div>
-
+</div>
     <!-- home -->
-
-
 
     <!-- projects -->
 
+    <div id="projects" class="py-5">
 
+    <h2
 
-    <!-- skills -->
-    <h2 class="container d-flex align-items-center justify-content-center">Skills & Toolset</h2>
+        class="container d-flex align-items-center justify-content-center"
+      >
+        Projects
+      </h2>
 
-    <div class="skillsContainer">
-        <div class="row row-equal-height justify-content-center">
-            <div class="col-md-4 mb-3">
-                <!-- Card Content -->
-                <div class="card">
+    <div id="projects" class="container py-3">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <!-- Project 1 -->
+            <div class="col">
+                <div class="card h-100 text-center">
                     <div class="card-body">
-                        <h5 class="card-title text-center">Frontend</h5>
-                        <ul class="list-unstyled skillsList ms-3">
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>Bootstrap</li>
-                            <li>Tailwind</li>
-                            <li>React.JS</li>
-                            <li>Vite</li>
-                            <li>Vercel</li>
-                        </ul>
+                        <h5 class="card-title">Project Title 1</h5>
+                        <img src="placeholder-image.jpg" class="card-img-top" alt="Project Image"> <!-- Placeholder image -->
+                    </div>
+                    <div class="card-footer bg-transparent border-0 d-flex justify-content-center align-items-center">
+                        <i class="demo-icon me-2">🚀</i> <!-- Smaller icon to the left of the button -->
+                        <a href="#" class="btn btn-primary">Demo Me</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-3">
-                <!-- Card Content -->
-                <div class="card">
+            <!-- Project 2 -->
+            <div class="col">
+                <div class="card h-100 text-center">
                     <div class="card-body">
-                        <h5 class="card-title text-center">Backend</h5>
-                        <ul class="list-unstyled skillsList ms-3">
-                            <li>Node.JS</li>
-                            <li>Express.JS</li>
-                            <li>Python</li>
-                            <li>Java</li>
-                            <li>MongoDB</li>
-                            <li>MySQL</li>
-                            <li>Render</li>
-                        </ul>
+                        <h5 class="card-title">Project Title 1</h5>
+                        <img src="placeholder-image.jpg" class="card-img-top" alt="Project Image"> <!-- Placeholder image -->
+                    </div>
+                    <div class="card-footer bg-transparent border-0 d-flex justify-content-center align-items-center">
+                        <i class="demo-icon me-2">🚀</i> <!-- Smaller icon to the left of the button -->
+                        <a href="#" class="btn btn-primary">Demo Me</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-3">
-                <!-- Card Content -->
-                <div class="card">
+            <!-- Project 3 -->
+            <div class="col">
+                <div class="card h-100 text-center">
                     <div class="card-body">
-                        <h5 class="card-title text-center">Additionals</h5>
-                        <ul class="list-unstyled skillsList ms-3">
-                            <li>GitHub</li>
-                            <li>GitLab</li>
-                            <li>Figma</li>
-                            <li>Canva</li>
-                            <li></li>
-                        </ul>
+                        <h5 class="card-title">Project Title 1</h5>
+                        <img src="placeholder-image.jpg" class="card-img-top" alt="Project Image"> <!-- Placeholder image -->
+                    </div>
+                    <div class="card-footer bg-transparent border-0 d-flex justify-content-center align-items-center">
+                        <i class="demo-icon me-2">🚀</i> <!-- Smaller icon to the left of the button -->
+                        <a href="#" class="btn btn-primary">Demo Me</a>
                     </div>
                 </div>
             </div>
+            <!-- Project 4 -->
+            <div class="col">
+              <div class="card h-100 text-center">
+                  <div class="card-body">
+                      <h5 class="card-title">Project Title 1</h5>
+                      <img src="placeholder-image.jpg" class="card-img-top" alt="Project Image"> <!-- Placeholder image -->
+                  </div>
+                  <div class="card-footer bg-transparent border-0 d-flex justify-content-center align-items-center">
+                      <i class="demo-icon me-2">🚀</i> <!-- Smaller icon to the left of the button -->
+                      <a href="#" class="btn btn-primary">Demo Me</a>
+                  </div>
+              </div>
+          </div>
+          <!-- Project 5 -->
+          <div class="col">
+            <div class="card h-100 text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Project Title 1</h5>
+                    <img src="placeholder-image.jpg" class="card-img-top" alt="Project Image"> <!-- Placeholder image -->
+                </div>
+                <div class="card-footer bg-transparent border-0 d-flex justify-content-center align-items-center">
+                    <i class="demo-icon me-2">🚀</i> <!-- Smaller icon to the left of the button -->
+                    <a href="#" class="btn btn-primary">Demo Me</a>
+                </div>
+            </div>
+        </div>
+        <!-- Project 6 -->
+        <div class="col">
+          <div class="card h-100 text-center">
+              <div class="card-body">
+                  <h5 class="card-title">Project Title 1</h5>
+                  <img src="placeholder-image.jpg" class="card-img-top" alt="Project Image"> <!-- Placeholder image -->
+              </div>
+              <div class="card-footer bg-transparent border-0 d-flex justify-content-center align-items-center">
+                  <i class="demo-icon me-2">🚀</i> <!-- Smaller icon to the left of the button -->
+                  <a href="#" class="btn btn-primary">Demo Me</a>
+              </div>
+          </div>
+      </div>
         </div>
     </div>
+</div>
 
-    <div id="skills" class="scroll-container">
-        <div class="photo-scroll">
-            <img src="./images/html.png" alt="Photo 1">
-            <img src="./images/css.png" alt="Photo 2">
-            <img src="./images/bootstrap.png" alt="Photo 3">
-            <img src="./images/javascript.png" alt="Photo 4">
-            <img src="./images/mongodb.png" alt="Photo 5">
-            <img src="./images/express.png" alt="Photo 6">
-            <img src="./images/react.png" alt="Photo 7">
-            <img src="./images/nodejs.png" alt="Photo 8">
-            <img src="./images/api.png" alt="Photo 9">
-            <img src="./images/java.png" alt="Photo 10">
-            <img src="./images/python.png" alt="Photo 11">
-            <img src="./images/aws.png" alt="Photo 12">
-            <img src="./images/github.png" alt="Photo 13">
-            <img src="./images/gitlab.png" alt="Photo 14">
-            <img src="./images/canva.png" alt="Photo 15">
-            <img src="./images/figma.png" alt="Photo 16">
-            <img src="./images/microsoft.png" alt="Photo 17">
-            <!-- Repeat the set for smooth animation -->
-            <img src="./images/html.png" alt="Photo 1">
-            <img src="./images/css.png" alt="Photo 2">
-            <img src="./images/bootstrap.png" alt="Photo 3">
-            <img src="./images/javascript.png" alt="Photo 4">
-            <img src="./images/mongodb.png" alt="Photo 5">
-            <img src="./images/express.png" alt="Photo 6">
-            <img src="./images/react.png" alt="Photo 7">
-            <img src="./images/nodejs.png" alt="Photo 8">
-            <img src="./images/api.png" alt="Photo 9">
-            <img src="./images/java.png" alt="Photo 10">
-            <img src="./images/python.png" alt="Photo 11">
-            <img src="./images/aws.png" alt="Photo 12">
-            <img src="./images/github.png" alt="Photo 13">
-            <img src="./images/gitlab.png" alt="Photo 14">
-            <img src="./images/canva.png" alt="Photo 15">
-            <img src="./images/figma.png" alt="Photo 16">
-            <img src="./images/microsoft.png" alt="Photo 17">
+    <!-- skills -->
+
+    <div class="skillsDiv">
+      <h2
+        id="skills"
+        class="container d-flex align-items-center justify-content-center"
+      >
+        Skills & Toolset
+      </h2>
+
+      <div class="skillsContainer">
+        <div class="row row-equal-height justify-content-center">
+          <div class="col-md-4">
+            <!-- Card Content -->
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title text-center">Frontend</h5>
+                <div class="row d-flex justify-content-center">
+                  <ul class="list-unstyled col-6">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Bootstrap</li>
+                  </ul>
+                  <ul class="list-unstyled col-6">
+                    <li>Tailwind</li>
+                    <li>React.JS</li>
+                    <li>Vite.JS</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <!-- Card Content -->
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title text-center">Backend</h5>
+                <div class="row d-flex justify-content-center">
+                  <ul class="list-unstyled col-6">
+                    <li>Node.JS</li>
+                    <li>Express.JS</li>
+                    <li>Python</li>
+                  </ul>
+                  <ul class="list-unstyled col-6">
+                    <li>Java</li>
+                    <li>MongoDB</li>
+                    <li>SQL</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <!-- Card Content -->
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title text-center">Additionals</h5>
+                <div class="row d-flex justify-content-center">
+                  <ul class="list-unstyled col-6">
+                    <li>GitHub</li>
+                    <li>GitLab</li>
+                    <li>Figma</li>
+                  </ul>
+                  <ul class="list-unstyled col-6">
+                    <li>Canva</li>
+                    <li>Vercel</li>
+                    <li>Render</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <div class="scroll-container">
+        <div class="photo-scroll">
+          <img src="./images/html.png" alt="html" />
+          <img src="./images/css.png" alt="css" />
+          <img src="./images/bootstrap.png" alt="bootstrap" />
+          <img src="./images/javascript.png" alt="js" />
+          <img src="./images/mongodb.png" alt="mongodb" />
+          <img src="./images/express.png" alt="express" />
+          <img src="./images/react.png" alt="react" />
+          <img src="./images/vite.png" alt="vite" />
+          <img src="./images/nodejs.png" alt="node" />
+          <img src="./images/api.png" alt="api" />
+          <img src="./images/java.png" alt="java" />
+          <img src="./images/python.png" alt="python" />
+          <img src="./images/aws.png" alt="aws" />
+          <img src="./images/github.png" alt="github" />
+          <img src="./images/gitlab.png" alt="gitlab" />
+          <img src="./images/canva.png" alt="canva" />
+          <img src="./images/figma.png" alt="figma" />
+          <img src="./images/microsoft.png" alt="microsoft" />
+          <!-- Repeat the set for smooth animation -->
+          <img src="./images/html.png" alt="html" />
+          <img src="./images/css.png" alt="css" />
+          <img src="./images/bootstrap.png" alt="bootstrap" />
+          <img src="./images/javascript.png" alt="js" />
+          <img src="./images/mongodb.png" alt="mongodb" />
+          <img src="./images/express.png" alt="express" />
+          <img src="./images/react.png" alt="react" />
+          <img src="./images/vite.png" alt="vite" />
+          <img src="./images/nodejs.png" alt="node" />
+          <img src="./images/api.png" alt="api" />
+          <img src="./images/java.png" alt="java" />
+          <img src="./images/python.png" alt="python" />
+          <img src="./images/aws.png" alt="aws" />
+          <img src="./images/github.png" alt="github" />
+          <img src="./images/gitlab.png" alt="gitlab" />
+          <img src="./images/canva.png" alt="canva" />
+          <img src="./images/figma.png" alt="figma" />
+          <img src="./images/microsoft.png" alt="microsoft" />
+        </div>
+      </div>
     </div>
 
     <!-- about me -->
@@ -168,12 +298,15 @@
 
     <!-- contact -->
 
-
-    <footer>
+    <footer class="d-flex justify-content-center">
         &copy; 2024 - All resources used are free | NJT.dev
     </footer>
 
     <script src="scripts.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

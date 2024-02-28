@@ -2,14 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: hidden; /* Prevent scrolling before entering the main content */
+    overflow: hidden;
+    /* Prevent scrolling before entering the main content */
 }
 
 #overlay {
@@ -21,14 +23,15 @@ body, html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 10; /* Ensures it stays above the main content */
+    z-index: 10;
+    /* Ensures it stays above the main content */
 }
 
 #overlay h1 {
     position: absolute;
     bottom: 15%;
     left: 35%;
-    font-weight: 700;
+    font-weight: 500;
     scale: 8;
     color: #ECECEC;
     margin-bottom: 20px;
@@ -38,52 +41,71 @@ body, html {
 button {
     position: absolute;
     bottom: 10%;
-    right: 32%;
+    right: 26%;
 }
 
 #overlayButton {
     padding: 10px 20px;
     font-size: 18px;
     cursor: pointer;
-    border: none; /* Remove default border */
-    outline: none; /* Remove outline on focus */
-    border-radius: 30px; /* Rounded corners */
-    background: linear-gradient(145deg, #252525, #232229); /* Subtle gradient for a royal look */
-    color: #ffffff; /* White text color */
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
-    transition: all 0.3s ease; /* Smooth transition for interactions */
+    border: none;
+    /* Remove default border */
+    outline: none;
+    /* Remove outline on focus */
+    border-radius: 30px;
+    /* Rounded corners */
+    background: linear-gradient(145deg, #252525, #232229);
+    /* Subtle gradient for a royal look */
+    color: #ffffff;
+    /* White text color */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    /* Soft shadow for depth */
+    transition: all 0.3s ease;
+    /* Smooth transition for interactions */
 }
 
 #overlayButton:hover {
-    background: linear-gradient(145deg, #1b1b1b, #2e2e2e); /* Gradient inversion on hover */
-    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4); /* Slightly larger shadow on hover */
+    background: linear-gradient(145deg, #1b1b1b, #2e2e2e);
+    /* Gradient inversion on hover */
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4);
+    /* Slightly larger shadow on hover */
 }
 
 #overlayButton:active {
-    background: #33313b; /* Solid color on active to give a feeling of depth */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Smaller shadow to simulate pressing */
+    background: #33313b;
+    /* Solid color on active to give a feeling of depth */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    /* Smaller shadow to simulate pressing */
 }
 
 .rounded-image {
     max-width: 100%;
     height: auto;
-    border-radius: 50%; /* Makes the image round */
-    object-fit: cover; /* Keeps the aspect ratio intact */
+    border-radius: 50%;
+    /* Makes the image round */
+    object-fit: cover;
+    /* Keeps the aspect ratio intact */
 }
 
 .icons {
     display: flex;
-    gap: 10px; /* Adjust the space between icons */
+    gap: 10px;
+    /* Adjust the space between icons */
 }
 
 .placeholder-icon {
     display: inline-block;
-    width: 40px; /* Adjust width as needed */
-    height: 40px; /* Adjust height as needed */
-    background-color: #ddd; /* Placeholder background color */
+    width: 40px;
+    /* Adjust width as needed */
+    height: 40px;
+    /* Adjust height as needed */
+    background-color: #ddd;
+    /* Placeholder background color */
     text-align: center;
-    line-height: 40px; /* Center text vertically */
-    border-radius: 5px; /* Slightly rounded corners for icons */
+    line-height: 40px;
+    /* Center text vertically */
+    border-radius: 5px;
+    /* Slightly rounded corners for icons */
     /* Add more styling as needed */
 }
 
@@ -95,26 +117,36 @@ button {
 
 /* Main content styling */
 #mainContent {
-    display: none; /* Hidden initially */
+    display: none;
+    /* Hidden initially */
     animation: fadeIn 1s ease-out forwards;
     /* More styles for your content */
 }
 
 /* Fade in animation for main content */
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 #circleNav {
     position: fixed;
-    top: 40px; /* Position from the top */
-    right: 60px; /* Position from the right */
+    top: 40px;
+    /* Position from the top */
+    right: 60px;
+    /* Position from the right */
     width: 60px;
     height: 60px;
-    background-color: #333; /* Dark grey */
+    background-color: #333;
+    /* Dark grey */
     border-radius: 50%;
-    visibility: hidden; /* Initially hidden */
+    visibility: hidden;
+    /* Initially hidden */
     transition: visibility 0.5s, opacity 0.5s linear;
     z-index: 100;
 }
@@ -145,7 +177,7 @@ button {
 }
 
 #menuToggle.active .menuLines:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
+    transform: rotate(-45deg) translate(6px, -7px);
 }
 
 
@@ -158,28 +190,29 @@ button {
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    visibility: hidden; /* Initially hidden */
+    visibility: hidden;
     opacity: 0;
     transition: opacity 0.5s ease;
-    z-index: 200; /* Ensure it's above other elements */
+    z-index: 200;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 
 #menuOptions li a {
     font-size: 1.5rem;
     text-decoration: none;
-    color: black;
+    color: #ececec;
     display: block;
     padding: 10px 20px;
     transition: background-color 0.3s;
 }
 
 #menuOptions li a:hover {
-    background-color: #575757; /* Lighter grey */
+    background-color: #575757;
 }
 
 .skillsList li {
-    margin-top: auto; /* Adds space between list items */
+    margin-top: auto;
     width: 100%;
     cursor: default;
 }
@@ -190,11 +223,15 @@ button {
 }
 
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
-    transition: 0.3s; /* Animation for hover */
-    border: none; /* Removes the border */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* Adds shadow for depth */
+    transition: 0.3s;
+    /* Animation for hover */
+    border: none;
+    /* Removes the border */
     display: flex;
-    flex-direction: column; /* Stack the card-body and card-footer */
+    flex-direction: column;
+    /* Stack the card-body and card-footer */
     height: 100%;
 }
 
@@ -203,22 +240,26 @@ button {
 }
 
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); /* Larger shadow on hover for depth */
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    /* Larger shadow on hover for depth */
 }
 
 .card-body {
-    padding: 1.25rem; /* Adjusts padding inside the card */
+    padding: 1.25rem;
+    /* Adjusts padding inside the card */
     flex: 1;
     display: flex;
     flex-direction: column;
 }
 
 .card-title {
-    margin-bottom: 1rem; /* Space between title and list */
+    margin-bottom: 1rem;
+    /* Space between title and list */
 }
 
 .skillsContainer {
-    padding: 2rem; /* Padding around the entire container */
+    padding: 2rem;
+    /* Padding around the entire container */
 }
 
 
@@ -245,22 +286,25 @@ button {
     0% {
         transform: translateX(0);
     }
+
     100% {
-        transform: translateX(-50%); /* As the images are repeated, -50% will make it seamless */
+        transform: translateX(-50%);
     }
 }
 
-/* Existing styles ... */
-
-@media (max-width: 800px) {
+@media (max-width: 768px) {
     #overlay h1 {
         position: absolute;
-        bottom: 1%;
-        left: 10%; /* Adjust as needed */
-        transform-origin: left bottom; /* Set the origin of transformation */
-        white-space: nowrap; /* Ensure the text doesn't wrap */
-        font-weight: 700;
-        font-size: 1.4rem; /* Adjust font size as needed */
+        bottom: 10%;
+        left: 5%;
+        /* Adjust as needed */
+        transform-origin: left bottom;
+        /* Set the origin of transformation */
+        white-space: nowrap;
+        /* Ensure the text doesn't wrap */
+        font-weight: 500;
+        font-size: 1.8rem;
+        /* Adjust font size as needed */
         color: #ECECEC;
         margin-bottom: 20px;
         font-style: italic;
@@ -268,42 +312,53 @@ button {
 
     button {
         position: absolute;
-        bottom: 12%;
-        right: 35%;
+        bottom: 20%;
+        right: 15%;
     }
 
     #overlayButton {
-        padding: 8px 16px; /* Slightly smaller padding */
-        font-size: 16px; /* Slightly smaller font size */
+        padding: 8px 16px;
+        /* Slightly smaller padding */
+        font-size: 16px;
+        /* Slightly smaller font size */
         /* ... other styles ... */
     }
 
     /* Adjust the nav circle size and position */
     #circleNav {
-        top: 20px; /* Closer to the top */
-        right: 20px; /* Closer to the right */
-        width: 50px; /* Smaller width */
-        height: 50px; /* Smaller height */
+        top: 20px;
+        /* Closer to the top */
+        right: 20px;
+        /* Closer to the right */
+        width: 50px;
+        /* Smaller width */
+        height: 50px;
+        /* Smaller height */
         /* ... other styles ... */
     }
 
     /* Adjust the menu toggle lines */
     .menuLines {
-        width: 25px; /* Shorter lines */
+        width: 25px;
+        /* Shorter lines */
         /* ... other styles ... */
     }
 
     /* Adjust the menu options font size */
     #menuOptions li a {
-        font-size: 1.2rem; /* Smaller font size */
+        font-size: 1.2rem;
+        /* Smaller font size */
         /* ... other styles ... */
     }
 
     /* Adjust the photo scroll */
     .photo-scroll img {
-        width: 80px; /* Smaller images */
-        height: 80px; /* Smaller images */
-        padding: 1rem; /* Less padding */
+        width: 80px;
+        /* Smaller images */
+        height: 80px;
+        /* Smaller images */
+        padding: 1rem;
+        /* Less padding */
     }
 
     /* Adjust the scroll animation speed if needed */
@@ -312,59 +367,74 @@ button {
     }
 }
 
-/* You might want to add another media query for even smaller screens like mobile phones */
 @media (max-width: 500px) {
+
     /* Similar adjustments as above, but even more pronounced for smaller screens */
     #overlay h1 {
         position: absolute;
         bottom: 3%;
         left: 95%;
-        font-weight: 700;
+        font-weight: 500;
         font-size: 3rem;
-        scale: 3; /* Make the title smaller */
-        transform: rotate(-90deg); /* Rotate 90 degrees counter-clockwise */
-        transform-origin: left bottom; /* Set the origin of transformation */
-        white-space: nowrap; /* Ensure the text doesn't wrap */
+        scale: 3;
+        /* Make the title smaller */
+        transform: rotate(-90deg);
+        /* Rotate 90 degrees counter-clockwise */
+        transform-origin: left bottom;
+        /* Set the origin of transformation */
+        white-space: nowrap;
+        /* Ensure the text doesn't wrap */
     }
 
     button {
         position: absolute;
-        bottom: 58%;
+        bottom: 68%;
         right: 12%;
     }
 
     #overlayButton {
-        padding: 8px 16px; /* Slightly smaller padding */
-        font-size: 16px; /* Slightly smaller font size */
+        padding: 8px 16px;
+        /* Slightly smaller padding */
+        font-size: 16px;
+        /* Slightly smaller font size */
         /* ... other styles ... */
     }
 
     /* Adjust the nav circle size and position */
     #circleNav {
-        top: 25px; /* Closer to the top */
-        right: 30px; /* Closer to the right */
-        width: 50px; /* Smaller width */
-        height: 50px; /* Smaller height */
+        top: 25px;
+        /* Closer to the top */
+        right: 30px;
+        /* Closer to the right */
+        width: 50px;
+        /* Smaller width */
+        height: 50px;
+        /* Smaller height */
         /* ... other styles ... */
     }
 
     /* Adjust the menu toggle lines */
     .menuLines {
-        width: 25px; /* Shorter lines */
+        width: 25px;
+        /* Shorter lines */
         /* ... other styles ... */
     }
 
     /* Adjust the menu options font size */
     #menuOptions li a {
-        font-size: 1.2rem; /* Smaller font size */
+        font-size: 1.2rem;
+        /* Smaller font size */
         /* ... other styles ... */
     }
 
     /* Adjust the photo scroll */
     .photo-scroll img {
-        width: 80px; /* Smaller images */
-        height: 80px; /* Smaller images */
-        padding: 1rem; /* Less padding */
+        width: 80px;
+        /* Smaller images */
+        height: 80px;
+        /* Smaller images */
+        padding: 1rem;
+        /* Less padding */
     }
 
     /* Adjust the scroll animation speed if needed */
@@ -373,3 +443,37 @@ button {
     }
 }
 
+#projects .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 10px; /* Rounded corners for the card */
+}
+
+#projects .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    scale: 1.35;
+    z-index: 10;
+}
+
+#projects .card-img-top {
+    border-top-left-radius: 10px; /* Align with card's border-radius */
+    border-top-right-radius: 10px; /* Align with card's border-radius */
+    height: 200px; /* Adjust the height as needed */
+    object-fit: cover; /* Keeps the aspect ratio intact */
+}
+
+.demo-icon {
+    font-size: 1.5rem; /* Smaller size for the icon */
+    margin-right: 10px; /* Space between icon and button */
+}
+
+#projects .card-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.25rem;
+}
+
+#projects .btn {
+    border-radius: 20px; /* Rounded corners for the button */
+}
